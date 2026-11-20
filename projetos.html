@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projetos — Lucas Martins</title>
+  <meta name="description" content="Projetos de Lucas Martins — Desenvolvedor de Software Back-End especializado em C#, .NET e Google Cloud Platform.">
+  <meta name="theme-color" content="#0061A4">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%230061A4'/%3E%3Ctext x='50' y='68' font-size='58' font-family='Arial, sans-serif' fill='white' text-anchor='middle'%3ELM%3C/text%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a href="index.html#hero" class="logo">LM<span class="logo-dot">.</span></a>
+
+      <nav class="nav" id="nav">
+        <ul class="nav-list">
+          <li><a href="index.html#sobre" class="nav-link">Sobre</a></li>
+          <li><a href="index.html#experiencia" class="nav-link">Experiência</a></li>
+          <li><a href="index.html#habilidades" class="nav-link">Habilidades</a></li>
+          <li><a href="index.html#formacao" class="nav-link">Formação</a></li>
+          <li><a href="projetos.html" class="nav-link active" aria-current="page">Projetos</a></li>
+          <li><a href="index.html#contato" class="nav-link">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" id="theme-toggle" aria-label="Alternar tema claro/escuro" title="Alternar tema">
+          <span class="material-symbols-outlined" id="theme-icon">dark_mode</span>
+        </button>
+        <button class="icon-btn nav-toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="projetos" class="section page-section reveal">
+      <div class="container">
+        <h1 class="section-title">
+          <span class="material-symbols-outlined section-icon">rocket_launch</span>
+          Projetos
+        </h1>
+        <p class="page-lead">
+          Projetos pessoais publicados no
+          <a href="https://github.com/lucasfm95" class="text-link" target="_blank" rel="noopener">GitHub</a>.
+          Clique em um deles para ver mais detalhes.
+          <span class="page-count" id="projects-count"></span>
+        </p>
+
+        <ul class="projects-grid" id="projects-list"></ul>
+      </div>
+    </section>
+  </main>
+
+  <dialog class="modal" id="project-modal" aria-labelledby="modal-title">
+    <div class="modal-header">
+      <span class="modal-icon" aria-hidden="true">
+        <span class="material-symbols-outlined" id="modal-icon">code</span>
+      </span>
+      <h2 id="modal-title"></h2>
+      <button class="icon-btn" id="modal-close" type="button" aria-label="Fechar">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    </div>
+
+    <div class="modal-body">
+      <p id="modal-desc"></p>
+
+      <div id="modal-features-wrap">
+        <h3 class="modal-subtitle">Destaques</h3>
+        <ul class="timeline-list" id="modal-features"></ul>
+      </div>
+
+      <div>
+        <h3 class="modal-subtitle">Tecnologias</h3>
+        <div class="chip-group" id="modal-stack"></div>
+      </div>
+    </div>
+
+    <div class="modal-actions" id="modal-links"></div>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Lucas Martins. Feito com HTML, CSS e JS puro.</p>
+    </div>
+  </footer>
+
+  <button class="fab" id="back-to-top" aria-label="Voltar ao topo">
+    <span class="material-symbols-outlined">arrow_upward</span>
+  </button>
+
+  <script src="js/script.js"></script>
+  <script src="js/projects.js"></script>
+  <script src="js/projects-page.js"></script>
+</body>
+</html>

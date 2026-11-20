@@ -61,6 +61,9 @@ function initHeaderElevation() {
 }
 
 function initScrollSpy() {
+  // Em páginas próprias (ex.: projetos.html) o item ativo já vem marcado no HTML
+  if (document.querySelector('.nav-link[aria-current="page"]')) return;
+
   const sections = document.querySelectorAll('main section[id]');
   const navLinks = document.querySelectorAll('.nav-link');
 
